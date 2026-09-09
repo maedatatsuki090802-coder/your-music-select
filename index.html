@@ -48,23 +48,23 @@
 
   .wrap{ max-width:760px; margin:0 auto; padding:0 22px 100px; }
 
-  .masthead{ padding:40px 0 26px; border-bottom:1px solid var(--line-on-sky); margin-bottom:32px; }
-  .masthead-row{ display:flex; align-items:center; justify-content:space-between; gap:18px; }
+  .masthead{ padding:24px 0 14px; border-bottom:1px solid var(--line-on-sky); margin-bottom:18px; }
+  .masthead-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
   .masthead-text{ min-width:0; }
-  .brand-mark{ font-family:var(--font-display); font-weight:700; font-style:italic; font-size:1.1rem; letter-spacing:-0.01em; color:var(--muted-on-sky); }
-  .select-title{ font-family:var(--font-display); font-weight:700; font-style:italic; font-size:clamp(2.1rem, 7vw, 3.1rem); letter-spacing:-0.01em; margin:8px 0 0; color:var(--ink-on-sky); line-height:1.1; }
+  .brand-mark{ font-family:var(--font-display); font-weight:700; font-style:italic; font-size:1rem; letter-spacing:-0.01em; color:var(--muted-on-sky); }
+  .select-title{ font-family:var(--font-display); font-weight:600; font-style:italic; font-size:clamp(0.78rem, 3.7vw, 1.05rem); letter-spacing:-0.005em; margin:3px 0 0; color:var(--ink-on-sky); line-height:1.25; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
   /* 2026-09-07 follow-up: サイト右上に、①の再生ページと全く同じ仕組み（同じCSS・同じ
      ディスク回転ロジック）で動く「実は押すと動く」ミニCDプレーヤーを設置。実際に音楽は
      流れないが、再生ボタンを押すとディスクが物理的な慣性つきで回転する——①のPlayer/
      Songページで使っているものと同一の見た目・同一の回転アルゴリズム。 */
-  .mini-cdplayer-wrap{ flex-shrink:0; width:68px; }
+  .mini-cdplayer-wrap{ flex-shrink:0; width:54px; }
   .mini-cdplayer-wrap .cdp-player{ position:relative; width:100%; max-width:100%; aspect-ratio:1/1; margin:0; animation:none; filter:drop-shadow(0 5px 10px rgba(0,0,0,0.4)); }
   .mini-cdplayer-wrap .cdp-hub{ height:24%; padding:0 4px; bottom:-8%; gap:0; justify-content:center; }
   .mini-cdplayer-wrap .cdp-hub-lcd{ display:none; }
   .mini-cdplayer-wrap .cdp-play-btn{ width:62%; height:80%; max-width:19px; max-height:19px; font-size:0.5rem; }
   @media (max-width:480px){
-    .mini-cdplayer-wrap{ width:52px; }
+    .mini-cdplayer-wrap{ width:42px; }
   }
 
   /* NEW/USEDの見出しタグ・各ページの見出しタグの右横に添える、①と同じ小さな
@@ -150,15 +150,14 @@
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.6);
   }
 
-  .intro-block{ margin-bottom:36px; }
-  .intro-lead{ font-family:var(--font-display); font-style:italic; font-weight:600; font-size:clamp(1.3rem, 4.2vw, 1.7rem); color:var(--ink-on-sky); margin:0 0 14px; line-height:1.5; }
-  .intro-sub{ font-size:0.95rem; color:var(--muted-on-sky); margin:0 0 16px; max-width:56ch; }
+  .intro-block{ margin-bottom:22px; }
+  .intro-lead{ font-family:var(--font-display); font-style:italic; font-weight:600; font-size:clamp(1.2rem, 4vw, 1.55rem); color:var(--ink-on-sky); margin:0 0 10px; line-height:1.4; }
   .oshi-chip{ display:inline-block; font-size:0.78rem; font-weight:700; color:var(--lamp-strong); background:var(--lamp-wash); border:1px solid var(--lamp); border-radius:100px; padding:6px 14px; }
 
   /* 2026-09-07 follow-up: 新品／中古はページ構造の2大ブロックのまま、それぞれの中身を
      「押すと専用ページに飛ぶボタン」の一覧に変更（各ランキングを独立ページ化）。 */
-  .condition-block{ margin-bottom:40px; }
-  .condition-head{ display:flex; align-items:baseline; gap:10px; margin-bottom:6px; }
+  .condition-block{ margin-bottom:26px; }
+  .condition-head{ display:flex; align-items:baseline; gap:10px; margin-bottom:4px; }
   .condition-eyebrow{ font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; padding:3px 10px; border-radius:100px; }
   .condition-block.is-new .condition-eyebrow{ color:var(--lamp-strong); background:var(--lamp-wash); border:1px solid var(--lamp); }
   .condition-block.is-used .condition-eyebrow{ color:var(--rust); background:transparent; border:1px solid var(--rust); }
@@ -167,32 +166,37 @@
      中立、ABOUTはmuted（控えめ）にして、ランキングと世界観ページを視覚的に区別する。 */
   .condition-block.is-guide .condition-eyebrow{ color:var(--ink-on-sky); background:var(--paper-2); border:1px solid var(--line-on-sky); }
   .condition-block.is-about .condition-eyebrow{ color:var(--muted-on-sky); background:transparent; border:1px solid var(--line-on-sky); }
-  .condition-title{ font-family:var(--font-display); font-weight:700; font-style:italic; font-size:1.42rem; margin:0; color:var(--ink-on-sky); }
-  .condition-sub{ font-size:0.85rem; color:var(--muted-on-sky); margin:0 0 18px; max-width:56ch; }
+  .condition-title{ font-family:var(--font-display); font-weight:700; font-style:italic; font-size:1.28rem; margin:0; color:var(--ink-on-sky); }
+  .condition-sub{ font-size:0.85rem; color:var(--muted-on-sky); margin:0 0 10px; max-width:56ch; line-height:1.5; }
 
-  .select-nav-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; }
+  /* follow-up 84（2026-09-09）: 選び方・ABOUTを含む全てのナビボタンを「縦積みの
+     横長リスト」に統一（以前の2カラムカード型は廃止、is-listだったスタイルを
+     デフォルトへ統合）。余白もさらに詰めて、ページ全体の縦幅を短縮。 */
+  .select-nav-grid{ display:grid; grid-template-columns:1fr; gap:6px; }
+  /* follow-up 85（2026-09-09）: タイトルと説明文を同じ行に並べ（flex-wrap）、矢印だけ
+     flex-basis:100%で強制的に2行目に送ることで、カード自体を2行に短縮。文字数が
+     多いカード（Your Music Recommendなど）は is-stacked で従来の縦積み3行のまま残す。 */
   .select-nav-card{
     appearance:none; text-align:left; cursor:pointer; width:100%;
     background:var(--paper); border:1px solid var(--line-on-paper); border-radius:12px;
-    padding:16px 15px 14px; display:flex; flex-direction:column; gap:5px; min-height:96px;
+    padding:8px 13px; display:flex; flex-direction:row; flex-wrap:wrap; align-items:baseline;
+    column-gap:6px; row-gap:1px; min-height:0;
     transition:border-color 0.12s ease, transform 0.12s ease;
   }
+  .select-nav-card.is-stacked{ flex-direction:column; align-items:flex-start; column-gap:0; row-gap:2px; padding:11px 15px; }
   .select-nav-card:hover{ transform:translateY(-1px); }
   .condition-block.is-new .select-nav-card:hover{ border-color:var(--lamp); }
   .condition-block.is-used .select-nav-card:hover{ border-color:var(--rust); }
   .condition-block.is-guide .select-nav-card:hover{ border-color:var(--ink-on-sky); }
   .condition-block.is-about .select-nav-card:hover{ border-color:var(--muted-on-sky); }
-  .nav-card-title{ font-weight:700; font-size:0.96rem; color:var(--ink); line-height:1.35; }
-  .nav-card-sub{ font-size:0.72rem; color:var(--ink-muted); line-height:1.5; flex-grow:1; }
-  .nav-card-arrow{ align-self:flex-end; font-family:var(--font-mono); font-size:0.68rem; margin-top:4px; }
+  .nav-card-title{ font-weight:700; font-size:0.88rem; color:var(--ink); line-height:1.4; }
+  .nav-card-sub{ font-size:0.72rem; color:var(--ink-muted); line-height:1.4; }
+  .nav-card-arrow{ flex-basis:100%; font-family:var(--font-mono); font-size:0.68rem; }
+  .select-nav-card.is-stacked .nav-card-arrow{ flex-basis:auto; align-self:flex-start; margin-top:2px; }
   .condition-block.is-new .nav-card-arrow{ color:var(--lamp-strong); }
   .condition-block.is-used .nav-card-arrow{ color:var(--rust); }
   .condition-block.is-guide .nav-card-arrow{ color:var(--ink-on-sky); }
   .condition-block.is-about .nav-card-arrow{ color:var(--muted-on-sky); }
-
-  @media (max-width:420px){
-    .select-nav-grid{ grid-template-columns:1fr; }
-  }
 
   /* ---------- follow-up 79（2026-09-08）: ①②③④の4ページ追加。①②は実用ガイド、
      ③④は⑦・Your Musicの思想を伝えるページ。既存のトークン・タイポグラフィをそのまま
@@ -251,23 +255,26 @@
   .page-title{ font-family:var(--font-display); font-weight:700; font-style:italic; font-size:clamp(1.4rem, 5vw, 1.9rem); margin:0 0 6px; color:var(--ink-on-sky); line-height:1.3; }
   .page-sub{ font-size:0.85rem; color:var(--muted-on-sky); margin:0; max-width:56ch; }
 
-  /* follow-up 76: 商品アイコンを「縦2列×横3行」で並べる固定2カラムグリッド。
-     5商品だと最後の1枠だけ空くが、それは崩さずそのまま扱う。 */
-  .product-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; margin-bottom:8px; }
-  .product-card{ position:relative; background:var(--paper); border:1px solid var(--line-on-paper); border-radius:10px; padding:10px; display:flex; flex-direction:column; gap:5px; }
-  .rank-badge{ position:absolute; top:7px; left:7px; width:19px; height:19px; border-radius:100%; background:var(--ink-on-sky); color:var(--sky); font-family:var(--font-mono); font-size:0.62rem; font-weight:700; display:flex; align-items:center; justify-content:center; z-index:1; }
-  .product-thumb{ width:100%; aspect-ratio:1/1; border-radius:6px; background:var(--paper-2); border:1px solid var(--line-on-paper); overflow:hidden; }
+  /* follow-up 83（2026-09-09）: 商品カードを「横長・縦積み」レイアウトに変更。
+     左に正方形サムネ、右に商品情報＋購入ボタンを縦に並べる横並びカードを、
+     5枚（or 3枚）縦に積む1カラムのリストにする。順位バッジは少し大きく・
+     視認性を上げて、写真の有無に関わらず数字が読めるようにする。 */
+  .product-grid{ display:flex; flex-direction:column; gap:10px; margin-bottom:8px; }
+  .product-card{ position:relative; background:var(--paper); border:1px solid var(--line-on-paper); border-radius:10px; padding:10px; display:flex; flex-direction:row; align-items:flex-start; gap:12px; }
+  .rank-badge{ position:absolute; top:8px; left:8px; width:25px; height:25px; border-radius:100%; background:var(--ink-on-sky); color:var(--sky); font-family:var(--font-mono); font-size:0.76rem; font-weight:700; display:flex; align-items:center; justify-content:center; z-index:1; box-shadow:0 2px 5px rgba(0,0,0,0.25), 0 0 0 2px var(--paper); }
+  .product-thumb{ flex-shrink:0; width:92px; aspect-ratio:1/1; border-radius:6px; background:var(--paper-2); border:1px solid var(--line-on-paper); overflow:hidden; }
   .product-thumb img{ width:100%; height:100%; object-fit:contain; display:block; background:#fff; }
   /* follow-up: 一部の楽天ショップ画像はリファラチェックで外部サイトからの直リンクを
      ブロックすることがあるため referrerpolicy="no-referrer" を付与。それでも読み込みに
      失敗した場合は壊れたアイコンの代わりに簡易プレースホルダーを表示する。 */
   .product-thumb.img-failed img{ display:none; }
   .product-thumb.img-failed{ display:flex; align-items:center; justify-content:center; }
-  .product-thumb.img-failed::after{ content:"NO IMAGE"; font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.05em; color:var(--ink-muted); }
-  .product-name{ font-weight:700; font-size:0.74rem; color:var(--ink); line-height:1.35; }
-  .product-blurb{ font-size:0.66rem; color:var(--ink-muted); flex-grow:1; line-height:1.5; }
-  .product-price{ font-family:var(--font-mono); font-size:0.62rem; color:var(--muted-on-sky); }
-  .buy-row{ display:flex; flex-direction:column; gap:5px; margin-top:2px; }
+  .product-thumb.img-failed::after{ content:"NO IMAGE"; font-family:var(--font-mono); font-size:0.54rem; letter-spacing:0.02em; color:var(--ink-muted); text-align:center; padding:0 4px; }
+  .product-info{ flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; }
+  .product-name{ font-weight:700; font-size:0.84rem; color:var(--ink); line-height:1.35; }
+  .product-blurb{ font-size:0.74rem; color:var(--ink-muted); line-height:1.55; }
+  .product-price{ font-family:var(--font-mono); font-size:0.66rem; color:var(--muted-on-sky); }
+  .buy-row{ display:flex; flex-direction:column; gap:5px; margin-top:4px; }
   .buy-link{
     display:block; width:100%; text-align:center; text-decoration:none;
     appearance:none; border:1px solid var(--line-on-paper); background:var(--paper-2); color:var(--ink);
@@ -278,19 +285,11 @@
   .buy-link.used:hover{ color:var(--rust); }
   .buy-link-none{ display:block; width:100%; text-align:center; font-family:var(--font-body); font-size:0.64rem; color:var(--ink-muted); padding:7px 6px; }
 
-  .ad-slot-card{ background:var(--paper-2); border:1px dashed var(--line-on-paper); border-radius:10px; padding:14px 16px; margin:20px 0 0; }
+  .ad-slot-card{ background:var(--paper-2); border:1px dashed var(--line-on-paper); border-radius:10px; padding:14px 16px; margin:20px 0 26px; }
   .ad-slot-link{ display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
   .ad-tag{ flex-shrink:0; font-family:var(--font-mono); font-size:0.62rem; font-weight:700; letter-spacing:0.06em; color:var(--rust); border:1px solid var(--rust); border-radius:4px; padding:2px 6px; }
   .ad-slot-body{ font-size:0.82rem; color:var(--ink-muted); }
   .ad-slot-note{ font-size:0.68rem; color:var(--muted-on-sky); margin-top:2px; }
-
-  .stats-card{ background:var(--paper); border:1px solid var(--line-on-paper); border-radius:12px; padding:20px; margin-top:8px; font-size:0.85rem; }
-  .stats-card h2{ font-family:var(--font-body); font-weight:700; font-size:0.95rem; margin:0 0 4px; color:var(--ink); }
-  .stats-card h3{ font-family:var(--font-body); font-weight:700; font-size:0.8rem; margin:18px 0 8px; color:var(--ink); }
-  .stats-note{ font-size:0.78rem; color:var(--ink-muted); margin:0 0 14px; }
-  .stats-row{ display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px dashed var(--line-on-paper); font-family:var(--font-mono); font-size:0.8rem; color:var(--ink); }
-  .stats-row:last-child{ border-bottom:none; }
-  .stats-total{ margin-top:10px; padding-top:10px; border-top:1px solid var(--line-on-paper); font-weight:700; display:flex; justify-content:space-between; }
 
   .back-link{ display:inline-block; margin-top:16px; font-size:0.85rem; color:var(--muted-on-sky); border:1px solid var(--line-on-sky); border-radius:100px; padding:10px 18px; text-decoration:none; }
   .back-link:hover{ border-color:var(--lamp); color:var(--ink-on-sky); }
@@ -319,24 +318,50 @@
 
   .view[hidden]{ display:none; }
 
-  @media (max-width: 380px){
-    .product-name{ font-size:0.7rem; }
-    .product-blurb{ display:none; }
+  /* follow-up 86（2026-09-09）: PC版レイアウト。同じHTML/URLのまま、画面幅700px以上で
+     ナビボタン・商品ランキングカードを横並びグリッドに切り替え、見出し類も少し拡大する。
+     auto-fitのminmaxグリッドなのでボタン数（2〜5個）に応じて自然に列数が変わる。
+     align-items:startで、行内のカードの高さが違っても余計なストレッチが起きないようにする。
+     follow-up 87（2026-09-09）: 「PC版は任せる」とのことなので、ここから下は自分の判断で
+     追加調整。スマホ版（このブロックの外）は一切変更していない。カード内の余白を少し
+     広げ、写真とランクバッジを一回り大きく、カードにごく薄い影を足して「詰め込んだ
+     スマホ画面を広げただけ」に見えないよう、PCらしい余裕を持たせた。 */
+  @media (min-width:700px){
+    .masthead{ padding:36px 0 20px; margin-bottom:28px; }
+    .mini-cdplayer-wrap{ width:66px; }
+
+    .intro-block{ margin-bottom:32px; }
+    .intro-lead{ font-size:1.7rem; }
+
+    .condition-block{ margin-bottom:38px; }
+    .condition-sub{ margin-bottom:14px; }
+    .condition-title{ font-size:1.55rem; }
+
+    .select-title{ font-size:1.5rem; }
+    .page-title{ font-size:2.1rem; }
+
+    .select-nav-grid{ grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:12px; align-items:start; }
+    .select-nav-card{ padding:13px 16px; box-shadow:0 1px 3px rgba(0,0,0,0.07); }
+    .select-nav-card.is-stacked{ height:100%; }
+    .nav-card-title{ font-size:0.98rem; }
+    .nav-card-sub{ font-size:0.76rem; }
+    .nav-card-arrow{ font-size:0.7rem; }
+
+    .product-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; align-items:start; }
+    .product-card{ padding:12px; gap:14px; box-shadow:0 1px 3px rgba(0,0,0,0.07); }
+    .product-thumb{ width:110px; }
+    .rank-badge{ width:27px; height:27px; font-size:0.8rem; }
+    .product-name{ font-size:0.88rem; }
+    .product-blurb{ font-size:0.76rem; }
   }
 </style>
-</head>
-<body>
 
-
-
-
-
-<div class="wrap">
+  <div class="wrap">
     <div class="masthead">
       <div class="masthead-row">
         <div class="masthead-text">
           <span class="brand-mark">Your Music</span>
-          <h1 class="select-title">YOUR MUSIC SELECT</h1>
+          <h1 class="select-title">CDプレイヤーランキング feat.yourmusic</h1>
         </div>
         <div class="mini-cdplayer-wrap" id="mastheadCdWrap"></div>
       </div>
@@ -346,12 +371,11 @@
     <div class="view" data-view="home">
       <section class="intro-block">
         <p class="intro-lead">CDだけ持っていて、プレーヤーを持っていないあなたへ。</p>
-        <p class="intro-sub">推しの最新アルバム、K-POPアイドルのCD、特典会や握手会をきっかけに手に入れた一枚、フェスやライブで出会ったアーティストのアルバムも、今度はCDでも聴いてみたい。<br>your music で出会ったその1曲も。<br>Your Music Selectionは、そんな音楽をもっと楽しむための一台を選ぶ場所です。<br>CDウォークマンの時代をもう一度。</p>
         <span class="oshi-chip">推し活にもおすすめ！</span>
       </section>
 
       <div class="condition-block is-guide">
-        <div class="condition-head"><span class="condition-eyebrow">GUIDE</span><h2 class="condition-title">まず、選び方から</h2></div>
+        <div class="condition-head"><span class="condition-eyebrow">GUIDE</span></div>
         <p class="condition-sub">CDプレーヤーが初めての人、どれを選べばいいか迷っている人へ。</p>
         <div class="select-nav-grid">
           <button class="select-nav-card" type="button" onclick="goto('how_to_choose')">
@@ -366,7 +390,7 @@
       <div class="condition-block is-new">
         <div class="condition-head"><span class="condition-eyebrow">NEW</span><h2 class="condition-title">新品で選ぶ</h2></div>
         <p class="condition-sub">まず確実に、新品で使いたい人へ。楽天市場・Amazonで購入できます。</p>
-        <div class="select-nav-grid">
+        <div class="select-nav-grid is-list">
           <button class="select-nav-card" type="button" onclick="goto('new_popularity')">
             <span class="nav-card-title">携帯用・人気順</span><span class="nav-card-sub">まず売れている定番の5台</span><span class="nav-card-arrow">TOP5を見る →</span>
           </button>
@@ -379,7 +403,7 @@
           <button class="select-nav-card" type="button" onclick="goto('new_home')">
             <span class="nav-card-title">部屋に置く据え置き型</span><span class="nav-card-sub">じっくり聴きたい人へ</span><span class="nav-card-arrow">TOP5を見る →</span>
           </button>
-          <button class="select-nav-card" type="button" onclick="goto('new_recommend')">
+          <button class="select-nav-card is-stacked" type="button" onclick="goto('new_recommend')">
             <span class="nav-card-title">Your Music Recommend</span><span class="nav-card-sub">値段も音質も人気も関係ない、ロマンの1台</span><span class="nav-card-arrow">見る →</span>
           </button>
         </div>
@@ -388,15 +412,15 @@
       <div class="condition-block is-used">
         <div class="condition-head"><span class="condition-eyebrow">USED</span><h2 class="condition-title">中古・掘り出し物で選ぶ</h2></div>
         <p class="condition-sub">生産終了モデルやレトロな一台との出会いを探したい人へ。メルカリで探せます。</p>
-        <div class="select-nav-grid">
+        <div class="select-nav-grid is-list">
           <button class="select-nav-card" type="button" onclick="goto('used_portable')">
             <span class="nav-card-title">おすすめの携帯用CDプレイヤー</span><span class="nav-card-sub">懐かしいモデルとの出会い</span><span class="nav-card-arrow">TOP5を見る →</span>
           </button>
+          <button class="select-nav-card" type="button" onclick="goto('used_y2k')">
+            <span class="nav-card-title">Y2K世代のCDプレーヤー</span><span class="nav-card-sub">2000年代CDプレイヤー</span><span class="nav-card-arrow">見る →</span>
+          </button>
           <button class="select-nav-card" type="button" onclick="goto('used_home')">
             <span class="nav-card-title">部屋に置くCDプレイヤー</span><span class="nav-card-sub">生産終了した名機を求めて</span><span class="nav-card-arrow">TOP5を見る →</span>
-          </button>
-          <button class="select-nav-card" type="button" onclick="goto('used_y2k')">
-            <span class="nav-card-title">Y2K世代のCDプレーヤー</span><span class="nav-card-sub">あの頃使っていた、SONY以外の一台</span><span class="nav-card-arrow">見る →</span>
           </button>
         </div>
       </div>
@@ -404,8 +428,6 @@
       <div id="adslot-home"></div>
 
       <div class="condition-block is-about">
-        <div class="condition-head"><span class="condition-eyebrow">ABOUT</span><h2 class="condition-title">Your Musicの世界観</h2></div>
-        <p class="condition-sub">⑦は、ただのCDプレーヤー比較サイトではありません。</p>
         <div class="select-nav-grid">
           <button class="select-nav-card" type="button" onclick="goto('cd_lovers')">
             <span class="nav-card-title">今、CDを楽しむ人へ</span><span class="nav-card-sub">CDを買った、その先へ。</span><span class="nav-card-arrow">読む →</span>
@@ -414,17 +436,6 @@
             <span class="nav-card-title">Your Musicとは</span><span class="nav-card-sub">このサイトをつくる理由</span><span class="nav-card-arrow">読む →</span>
           </button>
         </div>
-      </div>
-
-      <div class="stats-card">
-        <h2>このページのクリック実績</h2>
-        <p class="stats-note">このブラウザ内だけに記録される、デモの需要データです（他の人の分は含まれません・全ユーザー分の実際の集計は今後の実装で行います）。掲載している商品は実在するCDプレーヤーです（2026年9月時点、楽天市場の実売データをもとにClaudeが調査・選定）。商品写真も楽天市場の実際の商品ページに掲載されている画像です。「新品で選ぶ」の楽天リンク・「中古・掘り出し物で選ぶ」のメルカリのリンクは、アフィリエイトIDが反映済みです。Amazonの検索結果は、アフィリエイトIDの反映が完了次第、順次切り替えます（商品写真の表示自体はアフィリエイト審査と関係なく、楽天市場の公開画像を直接表示しています）。</p>
-        <div id="statsBody"></div>
-        <h3>購入先別</h3>
-        <div id="statsBySource"></div>
-        <h3>広告枠の実績（デモ）</h3>
-        <p class="stats-note" style="margin:0 0 8px;">表示回数・クリック数・CTRを広告枠ごとに記録しています。将来、ネイティブ/バナー/記事内など形式ごとの比較に使う想定です。</p>
-        <div id="statsAds"></div>
       </div>
 
       <a class="back-link" href="https://claude.ai/code/artifact/b4497416-ee26-4d85-a16c-1e9f253f7366">← Your Musicで音楽を探す</a>
@@ -439,6 +450,7 @@
         <p class="page-sub">まず売れている、定番の5台。楽天市場での実売動向をもとに選びました。</p>
       </div>
       <div class="product-grid" id="grid-new_popularity"></div>
+      <div id="adslot-new_popularity"></div>
     </div>
 
     <!-- ============ 新品・携帯用・音質順 ============ -->
@@ -450,6 +462,7 @@
         <p class="page-sub">音にこだわりたい人向けの5台。</p>
       </div>
       <div class="product-grid" id="grid-new_quality"></div>
+      <div id="adslot-new_quality"></div>
     </div>
 
     <!-- ============ 新品・携帯用・価格順 ============ -->
@@ -461,6 +474,7 @@
         <p class="page-sub">価格を抑えて、まず気軽に始めたい人向けの5台（安い順）。</p>
       </div>
       <div class="product-grid" id="grid-new_price"></div>
+      <div id="adslot-new_price"></div>
     </div>
 
     <!-- ============ 新品・据え置き型 ============ -->
@@ -472,6 +486,7 @@
         <p class="page-sub">じっくり聴きたい人・部屋に置きたい人向けの5台。</p>
       </div>
       <div class="product-grid" id="grid-new_home"></div>
+      <div id="adslot-new_home"></div>
     </div>
 
     <!-- ============ Your Music Recommend ============ -->
@@ -487,6 +502,7 @@
       <p class="article-body is-muted">実在の出品を確認できたのは5台のうち2台のみでした。残りは、実際に手に取れる出会いを引き続き探しています。</p>
 
       <div class="product-grid" id="grid-new_recommend"></div>
+      <div id="adslot-new_recommend"></div>
     </div>
 
     <!-- ============ 中古・携帯用 ============ -->
@@ -498,6 +514,7 @@
         <p class="page-sub">今は手に入らない、懐かしいモデルたち。メルカリの検索結果につながります。</p>
       </div>
       <div class="product-grid" id="grid-used_portable"></div>
+      <div id="adslot-used_portable"></div>
     </div>
 
     <!-- ============ 中古・据え置き型 ============ -->
@@ -509,6 +526,7 @@
         <p class="page-sub">生産終了した名機を、部屋に一台。メルカリの検索結果につながります。</p>
       </div>
       <div class="product-grid" id="grid-used_home"></div>
+      <div id="adslot-used_home"></div>
     </div>
 
     <!-- ============ 中古・Y2Kレトロ ============ -->
@@ -524,6 +542,7 @@
       <p class="article-body is-muted">生産終了から20年以上が経つモデルも多く、現在の中古流通は一台ごとに状況が異なります。写真・参考価格を掲載できるのは、実際に出品を確認できた一台のみです。</p>
 
       <div class="product-grid" id="grid-used_y2k"></div>
+      <div id="adslot-used_y2k"></div>
     </div>
 
     <!-- ============ CDプレーヤーの選び方 ============ -->
@@ -993,16 +1012,6 @@
     });
   }
 
-  var CATEGORY_LABELS = {
-    new_popularity: "新品・携帯用・人気順",
-    new_quality: "新品・携帯用・音質順",
-    new_price: "新品・携帯用・価格順",
-    new_home: "新品・据え置き型",
-    used_portable: "中古・携帯用",
-    used_home: "中古・据え置き型",
-    used_y2k: "中古・Y2Kレトロ",
-    new_recommend: "新品・Your Music Recommend"
-  };
   var SOURCE_LABELS = { rakuten: "楽天市場", amazon: "Amazon", mercari: "メルカリ" };
 
   /* follow-up 77（2026-09-07）: 「携帯用は人気順・音質順・価格順の3ランキング」という
@@ -1182,13 +1191,18 @@
         if(p.links.amazon) buyLinks.push(buyLink("amazon", p.links.amazon));
       }
       var buyRowHtml = buyLinks.length ? buyLinks.join("") : '<span class="buy-link-none">購入リンク未確認</span>';
+      var thumbHtml = p.img
+        ? '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest(\'.product-thumb\').classList.add(\'img-failed\')">'
+        : '';
       return '<div class="product-card">' +
         '<span class="rank-badge">' + (isUnranked ? "♪" : rank) + '</span>' +
-        '<div class="product-thumb"><img src="' + p.img + '" alt="' + p.name + '" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest(\'.product-thumb\').classList.add(\'img-failed\')"></div>' +
-        '<div class="product-name">' + p.name + '</div>' +
-        '<div class="product-blurb">' + p.blurb + '</div>' +
-        '<div class="product-price">' + p.price + '</div>' +
-        '<div class="buy-row">' + buyRowHtml + '</div>' +
+        '<div class="product-thumb' + (p.img ? '' : ' img-failed') + '">' + thumbHtml + '</div>' +
+        '<div class="product-info">' +
+          '<div class="product-name">' + p.name + '</div>' +
+          '<div class="product-blurb">' + p.blurb + '</div>' +
+          '<div class="product-price">' + p.price + '</div>' +
+          '<div class="buy-row">' + buyRowHtml + '</div>' +
+        '</div>' +
       '</div>';
     }).join("");
   }
@@ -1205,8 +1219,20 @@
   }
   var adSlotsRendered = {};
   /* follow-up 78: ページ数が7つに増えて各ページに広告を置くと見づらいため、
-     広告枠はホーム画面の「中古」ブロック下の1箇所のみに集約。 */
-  var AD_POSITION = { home:"home_below_used" };
+     広告枠はホーム画面の「中古」ブロック下の1箇所のみに集約。
+     follow-up 88（2026-09-09）: 各ランキングページの商品グリッド下にもネイティブ広告枠を追加。
+     ホームの1箇所とあわせて、ランキングページごとに広告在庫が生まれる形に戻す。 */
+  var AD_POSITION = {
+    home:"home_below_used",
+    new_popularity:"new_popularity_below_grid",
+    new_quality:"new_quality_below_grid",
+    new_price:"new_price_below_grid",
+    new_home:"new_home_below_grid",
+    new_recommend:"new_recommend_below_grid",
+    used_portable:"used_portable_below_grid",
+    used_home:"used_home_below_grid",
+    used_y2k:"used_y2k_below_grid"
+  };
   function ensureAdSlot(view){
     if(adSlotsRendered[view]) return;
     var el = document.getElementById("adslot-" + view);
@@ -1239,29 +1265,6 @@
     var clicks = loadClicks();
     clicks.push({ category:category, productId:productId, productName:productName, rank:rank, source:source, at:Date.now() });
     saveClicks(clicks);
-    renderStats();
-  }
-  function renderStats(){
-    var clicks = loadClicks();
-    var body = document.getElementById("statsBody");
-    var bySourceEl = document.getElementById("statsBySource");
-    if(!clicks.length){
-      body.innerHTML = '<p class="stats-note" style="margin:0;">まだクリックはありません。各ページのボタンを押すと、ここに反映されます。</p>';
-      bySourceEl.innerHTML = '';
-      return;
-    }
-    var counts = {};
-    clicks.forEach(function(c){ counts[c.category] = (counts[c.category] || 0) + 1; });
-    var rows = Object.keys(CATEGORY_LABELS).map(function(key){
-      return '<div class="stats-row"><span>' + CATEGORY_LABELS[key] + '</span><span>' + (counts[key] || 0) + '件</span></div>';
-    }).join("");
-    body.innerHTML = rows + '<div class="stats-total"><span>合計</span><span>' + clicks.length + '件</span></div>';
-
-    var sourceCounts = {};
-    clicks.forEach(function(c){ var s = c.source || "rakuten"; sourceCounts[s] = (sourceCounts[s] || 0) + 1; });
-    bySourceEl.innerHTML = Object.keys(SOURCE_LABELS).map(function(key){
-      return '<div class="stats-row"><span>' + SOURCE_LABELS[key] + '</span><span>' + (sourceCounts[key] || 0) + '件</span></div>';
-    }).join("");
   }
 
   function loadAdEvents(){
@@ -1286,7 +1289,6 @@
     var ev = loadAdEvents();
     ev.clicks.push({ adId:adId, position:position, format:"native", at:Date.now() });
     saveAdEvents(ev);
-    renderAdStats();
   }
   function renderAdSlot(adId, position){
     logAdImpression(adId, position);
@@ -1300,21 +1302,6 @@
       '</a>' +
     '</div>';
   }
-  function renderAdStats(){
-    var ev = loadAdEvents();
-    var el = document.getElementById("statsAds");
-    var ids = {};
-    ev.impressions.forEach(function(e){ ids[e.adId] = ids[e.adId] || { impressions:0, clicks:0 }; ids[e.adId].impressions++; });
-    ev.clicks.forEach(function(e){ ids[e.adId] = ids[e.adId] || { impressions:0, clicks:0 }; ids[e.adId].clicks++; });
-    var keys = Object.keys(ids);
-    if(!keys.length){ el.innerHTML = '<p class="stats-note" style="margin:0;">まだデータがありません。</p>'; return; }
-    el.innerHTML = keys.map(function(id){
-      var d = ids[id];
-      var ctr = d.impressions ? ((d.clicks / d.impressions) * 100).toFixed(1) : "0.0";
-      return '<div class="stats-row"><span>' + id + '</span><span>表示' + d.impressions + '・クリック' + d.clicks + '・CTR' + ctr + '%</span></div>';
-    }).join("");
-  }
-
   renderProductGrid("new_popularity");
   renderProductGrid("new_quality");
   renderProductGrid("new_price");
@@ -1323,8 +1310,6 @@
   renderProductGrid("used_portable");
   renderProductGrid("used_home");
   renderProductGrid("used_y2k");
-  renderStats();
-  renderAdStats();
   initMastheadCdPlayer();
   addEyebrowCdIcons();
   applyView(resolveView(location.hash));
